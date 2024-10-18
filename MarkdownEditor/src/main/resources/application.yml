@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+   name: MarkdownEditor
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 3000MB
+      max-request-size: 3000MB
+
+logging:
+  level:
+    com:
+      ishan:
+        markdowneditor: DEBUG
